@@ -1,9 +1,12 @@
-package dau;
+package ait.dau;
+
+import ait.model.Training;
 import java.time.LocalDate;
 import java.util.List;
-public interface Training {
 
-    boolean addTraining (Training Training);  //Добавление
+public interface Sport {
+
+    boolean addTraining (Training training);  //Добавление
 
     void deleteTraining (int index);  //Удаление по индексу
 
@@ -19,7 +22,5 @@ public interface Training {
 
     List<Training> findTrainingsByType(String type); //Поиск тренировок по типу
 
-    List<Training> getAllTrainings(); //Все тренировки
-
-
+    List<Training> getAllTrainings(); // все тренировки
 }
