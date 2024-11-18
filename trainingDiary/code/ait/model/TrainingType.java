@@ -11,6 +11,7 @@ public enum TrainingType {
     NORDIC_WALKING, // Скандинавская ходьба
 
     FITNESS        // Фитнес
+
 }
 
 
