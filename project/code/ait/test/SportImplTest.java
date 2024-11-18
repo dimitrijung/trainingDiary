@@ -87,9 +87,15 @@ class SportImplTest {
     @Test
     //findTrainingsByType: Ищет тренировки по типу.
     void findTrainingsByType() {
-        List<Training> result = sport.findTrainingsByType("RUNNING");
-        assertEquals(1, result.size()); // Ожидаем 1 тренировку типа RUNNING
-        assertEquals(TrainingType.RUNNING, result.get(0).getType());
+        // Проверяем поиск тренировок например типа WALKING
+        List<Training> walkingTrainings = sport.findTrainingsByType(TrainingType.WALKING);
+        assertEquals(1, walkingTrainings.size(), "Ожидается 1 тренировка типа WALKING");
+        assertEquals(TrainingType.WALKING, walkingTrainings.get(0).getType());
+
+        // Проверяем, что поиск по типу, который отсутствует, возвращает пустой список
+        sport.deleteAllTrainingsByDate(now.minusDays(7)); // Удаляем тренировки для теста
+        List<Training> emptyTrainings = sport.findTrainingsByType(TrainingType.WALKING);
+        assertTrue(emptyTrainings.isEmpty(), "Ожидается пустой список тренировок после удаления.");
     }
 
     @Test

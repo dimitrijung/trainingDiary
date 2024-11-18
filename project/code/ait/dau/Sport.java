@@ -1,6 +1,8 @@
 package ait.dau;
 
 import ait.model.Training;
+import ait.view.TrainingType;
+
 import java.time.LocalDate;
 import java.util.List;
 
@@ -20,7 +22,8 @@ public interface Sport {
 
     double calculateTotalDuration();//Подсчет общего времени тренировок (в часах)
 
-    List<Training> findTrainingsByType(String type); //Поиск тренировок по типу
+    List<Training> findTrainingsByType(TrainingType type); //Поиск тренировок по типу
 
     List<Training> getAllTrainings(); // все тренировки
+
 }

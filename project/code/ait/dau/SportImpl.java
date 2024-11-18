@@ -59,15 +59,19 @@ public class SportImpl implements Sport {
     }
 
     @Override
-    public List<Training> findTrainingsByType(String type) {//Проверяет, соответствует ли тип тренировки переданному.
-        try {
-            TrainingType trainingType = TrainingType.valueOf(type.toUpperCase());//Используется TrainingType.valueOf, чтобы привести строку к перечислению TrainingType. При некорректном типе возвращается пустой список.
-            return trainings.stream()
-                    .filter(training -> training.getType() == trainingType)//фильтруем/сравниваем и оставляем только те тренировки (элементы), у которых тип (training.getType()) совпадает с заданным типом (trainingType). Возвращает true, если тип тренировки совпадает с trainingType. В противном случае — false.
-                    .collect(Collectors.toList()); // Находим тренировки указанного типа
-        } catch (IllegalArgumentException e) {
-            return List.of(); // Если тип некорректен, возвращаем пустой список
-        }
+    public List<Training> findTrainingsByType(TrainingType type) {//Проверяет, соответствует ли тип тренировки переданному.
+        return trainings.stream()
+                .filter(training -> training.getType() == type)
+                .toList();
+
+//        try {
+//            TrainingType trainingType = TrainingType.valueOf(type.toUpperCase());//Используется TrainingType.valueOf, чтобы привести строку к перечислению TrainingType. При некорректном типе возвращается пустой список.
+//            return trainings.stream()
+//                    .filter(training -> training.getType() == trainingType)//фильтруем/сравниваем и оставляем только те тренировки (элементы), у которых тип (training.getType()) совпадает с заданным типом (trainingType). Возвращает true, если тип тренировки совпадает с trainingType. В противном случае — false.
+//                    .collect(Collectors.toList()); // Находим тренировки указанного типа
+//        } catch (IllegalArgumentException e) {
+//            return List.of(); // Если тип некорректен, возвращаем пустой список
+//        }
     }
 
     @Override
