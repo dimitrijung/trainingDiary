@@ -1,9 +1,6 @@
-package ait.model;
-
-//Enum для представления типов тренировок.
+package ait.view;
 
 public enum TrainingType {
-
     WALKING,       // Прогулка
 
     RUNNING,       // Бег
@@ -11,7 +8,4 @@ public enum TrainingType {
     NORDIC_WALKING, // Скандинавская ходьба
 
     FITNESS        // Фитнес
-
 }
-
-
