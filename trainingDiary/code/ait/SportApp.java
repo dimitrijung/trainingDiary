@@ -2,7 +2,7 @@ package ait;
 
 import ait.dao.SportImpl;
 import ait.model.Training;
-import ait.model.TrainingType;
+import ait.menu.TrainingType;
 
 import java.time.LocalDate;
 import java.util.List;

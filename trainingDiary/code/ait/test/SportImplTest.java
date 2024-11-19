@@ -2,7 +2,7 @@ package ait.test;
 
 import ait.dao.SportImpl;
 import ait.model.Training;
-import ait.model.TrainingType;
+import ait.menu.TrainingType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

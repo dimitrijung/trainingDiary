@@ -1,7 +1,7 @@
 package ait.dao;
 
 import ait.model.Training;
-import ait.model.TrainingType;
+import ait.menu.TrainingType;
 
 import java.io.*;
 import java.time.LocalDate;

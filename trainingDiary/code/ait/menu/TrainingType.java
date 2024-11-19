@@ -1,4 +1,4 @@
-package ait.model;
+package ait.menu;
 
 //Enum для представления типов тренировок.
 
