@@ -2,7 +2,7 @@ package ait;
 
 import ait.dao.SportImpl;
 import ait.model.Training;
-import ait.model.TrainingType;
+import ait.menu.TrainingType;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -57,8 +57,8 @@ public class SportApp {
                 case 13 -> {
                     // Прощание с пользователем
                     System.out.println("\n************************************************");
-                    System.out.println("* Thank you for using the Training Diary App! *");
-                    System.out.println("*                Goodbye!                     *");
+                    System.out.println("**  Thank you for using the Training Diary App! **");
+                    System.out.println("*                  Goodbye!                      *");
                     System.out.println("************************************************");
                     running = false; // Завершение работы приложения
                 }

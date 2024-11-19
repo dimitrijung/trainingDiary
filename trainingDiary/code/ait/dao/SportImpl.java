@@ -1,7 +1,7 @@
 package ait.dao;
 
 import ait.model.Training;
-import ait.model.TrainingType;
+import ait.menu.TrainingType;
 
 import java.io.*;
 import java.time.LocalDate;
@@ -81,6 +81,7 @@ public class SportImpl implements Sport {
         return trainings.stream()
                 .mapToDouble(Training::getDuration)
                 .sum();
+
     }
 
     @Override

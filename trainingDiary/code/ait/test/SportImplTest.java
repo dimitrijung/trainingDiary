@@ -2,7 +2,7 @@ package ait.test;
 
 import ait.dao.SportImpl;
 import ait.model.Training;
-import ait.model.TrainingType;
+import ait.menu.TrainingType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -86,11 +86,16 @@ class SportImplTest {
         assertEquals(10.0, sport.calculateTotalDistance(), 0.01); // Проверяем, что общее расстояние равно 10.0 км
     }
 
-    @Test
-    void testCalculateTotalDuration() {
-        // Подсчет общего времени
-        assertEquals(3.0, sport.calculateTotalDuration(), 0.01); // Проверяем, что общее время равно 3.0 часам
+//    @Test
+//    void testCalculateTotalDuration() {
+//        // Подсчет общего времени
+//        assertEquals(3.0, sport.calculateTotalDuration(), 0.01); // Проверяем, что общее время равно 3.0 часам
 
+        @Test
+        //calculateTotalDuration: Подсчитывает общее время тренировок.
+        void calculateTotalDuration() {
+            double totalDuration = sport.calculateTotalDuration();
+            assertEquals(3, totalDuration, 0.01); // Проверяем, что сумма времени тренировок совпадает
     }
 
     @Test
